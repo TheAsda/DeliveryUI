@@ -8,7 +8,6 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
-
   module: {
     rules: [
       {
@@ -16,9 +15,13 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
-        test: /\.ts.*/,
+        test: /\.tsx?$/,
         use: ["ts-loader"],
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
@@ -26,5 +29,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./resources/index.html"
     })
-  ]
+  ],
+  devServer: {
+    host: "0.0.0.0"
+  }
 };
