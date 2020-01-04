@@ -1,0 +1,15 @@
+.pay {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 400px;
+  h1 {
+    margin: 0;
+  }
+}
