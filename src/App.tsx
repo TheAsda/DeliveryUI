@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
 import PlaceOrder from "./components/PlaceOrder";
-import Menu from "./components/Menu";
 import PayOrder from "./components/PayOrder";
 import CloseOrder from "./components/CloseOrder";
 import GetPath from "./components/GetPath";
@@ -29,7 +28,6 @@ const App = () => {
       <DistrictsContext.Provider value={districts}>
         <PointsContext.Provider value={points}>
           <div className="frame">
-            <Menu />
             <PlaceOrder />
             <PayOrder />
             <CloseOrder />

@@ -47,7 +47,7 @@ const GetPath = () => {
         <Button onClick={get}>Get path</Button>
       </div>
       {data && (
-        <div>
+        <div style={{ paddingTop: "30px" }}>
           <h2>Total distance: {data.totalDistance.toFixed(0)} km</h2>
           <h2>Total time: {data.totalTime.toFixed(0)} mins</h2>
           <div className="addresses">

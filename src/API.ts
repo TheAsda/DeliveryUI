@@ -1,4 +1,4 @@
-import { INewOrder, IExistingOrder } from "./interfaces/Order";
+import { INewOrder, IExistingOrder, IOrderInfo } from "./interfaces/Order";
 import { IPath } from "./interfaces/Path";
 import { IPickPoint } from "./interfaces/PickPoint";
 import { IDistrict } from "./interfaces/District";
@@ -114,25 +114,26 @@ export const getOrders = () => {
   });
 };
 
-// export const getPaidOrders = ({
-//   district,
-//   date
-// }: {
-//   district: string;
-//   date: string;
-// }) => {
-//   return new Promise<>((res, rej) => {
-//     fetch(URL + "getPaid", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "appliction/json"
-//       },
-//       body: JSON.stringify({ district, date })
-//     })
-//       .then(response => response.json())
-//       .catch(err => rej(err))
-//       .then(jsonData => {
-
-//       });
-//   });
-// };
+export const getPaidOrders = ({
+  district,
+  date
+}: {
+  district: string;
+  date: string;
+}) => {
+  const body = { district, date };
+  return new Promise<IOrderInfo[]>((res, rej) => {
+    fetch(URL + "getPaid", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+      .then(response => response.json())
+      .catch(err => rej(err))
+      .then(jsonData => {
+        res(jsonData);
+      });
+  });
+};
