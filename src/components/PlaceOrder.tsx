@@ -39,13 +39,13 @@ const PlaceOrder = () => {
           <Input
             label="First name"
             onChange={e =>
-              setSender(Object.assign(sender, { firstName: e.target.value }))
+              setSender(Object.assign(sender, { first_name: e.target.value }))
             }
           />
           <Input
             label="Last name"
             onChange={e =>
-              setSender(Object.assign(sender, { lastName: e.target.value }))
+              setSender(Object.assign(sender, { last_name: e.target.value }))
             }
           />
           <Input
@@ -73,7 +73,7 @@ const PlaceOrder = () => {
             label="First name"
             onChange={e =>
               setConsignee(
-                Object.assign(consignee, { firstName: e.target.value })
+                Object.assign(consignee, { first_name: e.target.value })
               )
             }
           />
@@ -81,7 +81,7 @@ const PlaceOrder = () => {
             label="Last name"
             onChange={e =>
               setConsignee(
-                Object.assign(consignee, { lastName: e.target.value })
+                Object.assign(consignee, { last_name: e.target.value })
               )
             }
           />

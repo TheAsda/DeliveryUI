@@ -2,8 +2,8 @@ import { IPath } from "./Path";
 
 export interface IClient {
   _id?: string;
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   phone: string;
   email: string;
   passport: string;

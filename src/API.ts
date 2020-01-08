@@ -3,7 +3,7 @@ import { IPath } from "./interfaces/Path";
 import { IPickPoint } from "./interfaces/PickPoint";
 import { IDistrict } from "./interfaces/District";
 
-const URL = "http://192.168.255.1:3000/";
+const URL = "http://localhost:3000/";
 
 export const placeOrder = (data: INewOrder) => {
   return new Promise<string>((res, rej) => {
