@@ -61,7 +61,11 @@ const GetPaid = () => {
                   <h3>
                     Total distance: {item.path.totalDistance.toFixed(0)} km
                   </h3>
-                  <h3>Total time: {item.path.totalDistance.toFixed(0)} mins</h3>
+                  <h3>Total time: {item.path.totalTime.toFixed(0)} mins</h3>
+                  <h3>Start point: {item.path.path[0]}</h3>
+                  <h3>
+                    End point: {item.path.path[item.path.path.length - 1]}
+                  </h3>
                 </div>
                 <h2>Sender</h2>
                 <div>
